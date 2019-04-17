@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumerController {
 
     @Autowired
-    DuClient duClient;
+    private DuClient duClient;
 
     @RequestMapping(value = "/getuserinfo", method = RequestMethod.GET)
     public String getUserInfo(@RequestParam String uid) {
