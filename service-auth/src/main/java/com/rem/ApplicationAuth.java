@@ -12,10 +12,10 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableFeignClients
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-public class ApplicationSession {
+public class ApplicationAuth {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(ApplicationSession.class).web(true).run(args);
+		new SpringApplicationBuilder(ApplicationAuth.class).web(true).run(args);
 	}
 
 }

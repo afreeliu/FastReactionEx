@@ -4,18 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.rem</groupId>
-    <artifactId>service-du</artifactId>
+    <artifactId>service-auth</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>service-du</name>
+    <name>service-auth</name>
     <description>Spring Cloud project</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.3.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <properties>
