@@ -31,7 +31,6 @@ public class UserController {
         user.phonenum = phonenum;
         user.username = username;
         user.password = password;
-        user.regtime = regtime;
         Object result = userRepository.saveAndFlush(user);
         return ret;
     }

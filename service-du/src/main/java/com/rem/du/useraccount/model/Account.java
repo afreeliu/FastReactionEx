@@ -5,27 +5,30 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@Table(name = "t_account")
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "t_uitem_attr")
-public class UItemAttr implements Serializable {
+public class Account {
 
     @Id
     @GeneratedValue
     public Long id;
+
     @Column(nullable = false)
-    public String attrname;
+    public String username;
     @Column(nullable = false)
-    public String attrvalue;
+    public String domain;
+    @Column(unique = true)
+    public String useraccount;
+    @Column(nullable = false)
+    public String password;
+    @Column(nullable = false)
+    public String accounttype;
     @CreatedDate
     private Date createTime;
     @LastModifiedDate
     private Date updateTime;
-    @ManyToOne
-    public UItem uitem;
 
 }
-

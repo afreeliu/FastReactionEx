@@ -1,10 +1,17 @@
 package com.rem.du.useraccount.model;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
+@Table(name = "t_uitem")
 public class UItem implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -21,15 +28,12 @@ public class UItem implements Serializable {
 	public String phonenum;
 	@Column(nullable = true, unique = true)
 	public String nickname;
-	@Column(nullable = false)
-	public String regtime;
+	@CreatedDate
+	private Date createTime;
+	@LastModifiedDate
+	private Date updateTime;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "uitem", fetch = FetchType.LAZY)
 	public Set<UItemAttr> uItemAttrs;
-
-	@ManyToMany(cascade = CascadeType.DETACH)
-	public Set<GItem> gitems;
-	@ManyToMany
-	public Set<DItem> ditems;
 
 }
