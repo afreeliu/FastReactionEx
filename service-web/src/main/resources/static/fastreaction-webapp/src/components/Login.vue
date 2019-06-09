@@ -17,8 +17,8 @@
         </div>
       </div>
       <div class="btn row">
-        <div class="btn-con con">
-          <a href="javascript:" class="login">登录</a>
+        <div class="btn-con con" @click="clickLoginBtn">
+          <a href="javascript:" class="login">{{this.$data.login_btn_text}}</a>
         </div>
       </div>
     </div>
@@ -28,17 +28,24 @@
 <script>
   export default {
     name: 'Login',
-    data () {
+    data() {
       return {
-        msg: ''
+        login_btn_text: "登录"
       }
     },
     methods: {
       clickTitle() {
         alert('hello vuejs, nick to meet you!')
+      },
+      clickLoginBtn() {
+        let that = this;
+        if(that.$data.login_btn_text === '登录') {
+          that.$data.login_btn_text = 'Login'
+        }else {
+          that.$data.login_btn_text = '登录'
+        }
       }
     }
-
   }
 </script>
 
@@ -93,6 +100,10 @@
     border: 0;
     border-radius: 2px;
     padding: .58rem;
+    cursor: pointer;
+  }
+  .login-box .row.btn:hover {
+    background: #ce4747;
   }
   .login-box .avatar.row {
     border: 0;
