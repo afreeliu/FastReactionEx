@@ -8,7 +8,7 @@ import './lib/mui/css/mui.css'
 // header相关,tabBar相关
 
 import { Header, Tabbar, TabItem } from 'mint-ui';
-
+import LoginView from './components/login/FRLoginView'
 
 
 Vue.config.productionTip = false
@@ -18,6 +18,12 @@ Vue.component(Header.name, Header);
 // tabBar相关
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
+
+
+// 创建组件
+Vue.component(LoginView.name, 'loginView')
+
+
 
 /* eslint-disable no-new */
 new Vue({

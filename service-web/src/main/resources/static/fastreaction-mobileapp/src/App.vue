@@ -1,3 +1,7 @@
+
+
+
+
 <template>
   <div id="app">
 
@@ -19,38 +23,45 @@
 <!--      </div>-->
 <!--    </form>-->
 
-    <mt-header title="多个按钮">
-      <div slot="left">
-        <mt-button v-link="'/'" icon="back">返回</mt-button>
-        <mt-button @click="handleClose">关闭</mt-button>
-      </div>
-      <mt-button icon="more" slot="right"></mt-button>
-    </mt-header>
+<!--    <mt-header title="多个按钮">-->
+<!--      <div slot="left">-->
+<!--        <mt-button v-link="'/'" icon="back">返回</mt-button>-->
+<!--        <mt-button @click="handleClose">关闭</mt-button>-->
+<!--      </div>-->
+<!--      <mt-button icon="more" slot="right"></mt-button>-->
+<!--    </mt-header>-->
 
-    <nav class="mui-bar mui-bar-tab">
-      <router-link class="mui-tab-item mui-active" to="/email">
-        <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
-        <span class="mui-tab-label">邮件</span>
-      </router-link>
-      <router-link class="mui-tab-item" to="/contacts">
-        <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">通讯录</span>
-      </router-link>
-      <router-link class="mui-tab-item" to="/person">
-        <span class="mui-icon mui-icon-person"></span>
-        <span class="mui-tab-label">我的</span>
-      </router-link>
-    </nav>
+<!--    <nav class="mui-bar mui-bar-tab">-->
+<!--      <router-link class="mui-tab-item mui-active" to="/email">-->
+<!--        <span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>-->
+<!--        <span class="mui-tab-label">邮件</span>-->
+<!--      </router-link>-->
+<!--      <router-link class="mui-tab-item" to="/contacts">-->
+<!--        <span class="mui-icon mui-icon-contact"></span>-->
+<!--        <span class="mui-tab-label">通讯录</span>-->
+<!--      </router-link>-->
+<!--      <router-link class="mui-tab-item" to="/person">-->
+<!--        <span class="mui-icon mui-icon-person"></span>-->
+<!--        <span class="mui-tab-label">我的</span>-->
+<!--      </router-link>-->
+<!--    </nav>-->
+<!--    <router-view/>-->
 
+  <loginView></loginView>
 
-
-    <router-view/>
   </div>
 </template>
 
+
 <script>
+  import Login from './components/login/FRLoginView'
+  import Email from './components/email/FREmailView'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components : [
+    Login
+  ]
 }
 </script>
 
@@ -60,6 +71,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  /*color: #2c3e50;*/
+  color: red;
 }
 </style>

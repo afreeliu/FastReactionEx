@@ -1,10 +1,12 @@
 <template>
-    
+    <h1 class="email">
+      Email
+    </h1>
 </template>
 
 <script>
     export default {
-        name: "FRMessageView"
+        name: "fremailview"
     }
 </script>
 

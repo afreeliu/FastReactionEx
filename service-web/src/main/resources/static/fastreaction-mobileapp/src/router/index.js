@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Email from '../components/message/FREmailView.vue'
+import Email from '../components/email/FREmailView.vue'
 import Contacts from '../components/contacts/FRContactsView'
 import Person from '../components/mine/FRPersonView'
 
