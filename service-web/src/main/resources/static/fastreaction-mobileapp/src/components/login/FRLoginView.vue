@@ -1,5 +1,5 @@
 <template>
-  <h1 class="frloginview">
+  <h1 class="loginView">
     Hello
   </h1>
 </template>

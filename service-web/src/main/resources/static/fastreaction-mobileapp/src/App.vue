@@ -46,22 +46,26 @@
 <!--      </router-link>-->
 <!--    </nav>-->
 <!--    <router-view/>-->
-
+  <naviView></naviView>
   <loginView></loginView>
+    <tabBarView></tabBarView>
 
   </div>
 </template>
 
 
 <script>
+  import Vue from 'vue'
   import Login from './components/login/FRLoginView'
-  import Email from './components/email/FREmailView'
+  import Navigation from './components/header/FRHeaderView'
+  import Tabbar from './components/tabbar/FRTabbarView'
+  Vue.component(Login.name, Login)
+  Vue.component(Navigation.name, Navigation)
+  Vue.component(Tabbar.name, Tabbar)
 
 export default {
   name: 'App',
-  components : [
-    Login
-  ]
+
 }
 </script>
 
