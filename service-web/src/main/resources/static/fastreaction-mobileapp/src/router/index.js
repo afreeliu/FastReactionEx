@@ -13,6 +13,12 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '',
+      redirect: '/login'
+    },
+
+
     {path: '/email', component : Email},
     {path: '/contacts', component : Contacts},
     {path: '/person', component : Person}

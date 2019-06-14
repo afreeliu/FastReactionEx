@@ -1,5 +1,5 @@
 <template>
-  <div class="naviView">
+  <div class="frheaderView">
     <header class="mui-bar mui-bar-nav">
       <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
       <h1 class="mui-title"> {{navititle}} </h1>
@@ -14,7 +14,7 @@
     import '../../lib/mui/css/mui.css'
 
     export default {
-      name: "naviView",
+      name: "FRHeaderView",
       components: {
         Header
       },
